@@ -1,0 +1,42 @@
+Aula 1
+Eu poderia fazer site de venda de peças ou materiais usados de carro e moto.-> Ideia de SAAS
+Fazer a instalação de nginx
+
+ -> Estudar os slides e sobre GET e POST, também não esquecer de fazer a leitura e exercícios.
+ -> Também estudar sobre html e css,  depois baixar linux bit
+Estudar como rodar um servidor, matar ele e etc, no prompt de comando e browser
+estudar sobre nginx
+
+AULA 2
+
+Como fazer leitura de documentos e etc, uso GET e POSTetc
+Estudar sobre a instalação de Docker e de containner
+Estudar sobre criação de path para páginas e de path de imagens
+Estudar apenas um pouco (por cima sobre php)
+Estudar mais um pouco fundo sobre docker
+______________________________________________________________
+Inicio de estudo sobre NodeJS:-> Criado em 2009 por Ryan Dahl e assistir vídeo sobre ele,  link disponibilizado no slide.
+Ele criou isso para resolver o problema de enfileiramento de requisições, porque outras requisições aguardavam na fila enquanto o servidor resolveria o primeiro requisição q chegou. Então ele criou ele  que passava  a resolver as requisições baseando em quão trabalhoso é a requisição, então ele resolveria parava em um e resolveria o mais rápido e depois continuava, apenas enfileirava as requisições mais complexas. Mostrou que com apenas 6 linhas vc poderia criar o seu servidor.
+Node é apenas bom para processamentos que não aguardam muito para terminar, coisas mais rápidas... Ele foi feito para aplicações que recebem várias requisições.
+NodeJs é um framework ?? O que são framework ?? Qual é a função dele ?? Me explica também essas mesmas coisas sobre containner. Também sobre API
+Servidor HTTP, ver sobre criação de servidor, como rodar e como derrubar e escolher portas para ele rodar?
+Fazer uma revisão sobre passagem por ponteiro e por parâmetro . 
+Precisamos instalar a ultima versão de node e npm mas eu apenas preciso verificar se já tinha instalado ele, porque eu já usei node em alguns dos meus projetos.
+E comandos de npm init , 
+npm = node packages maneger
+usar npm i xxxxxxxxxx -> isso faz as instalações de pacotes, sempre que precisamos, i é para instalar e xxxxxxx é o nome do pacote que queremos baixar.
+Biblioteca ou pacote express melhor que http.
+Se eu preciso mandar o código ou projeto para o meu colega, não preciso mandar node modules  para ele, porque ele poderia fazer a instalação de node modules dele.
+Começar a estudar sobre JavaScrit os comandos, let, criação de funções, comandos básicos console.log(), .map
+OBJETOS
+____________________
+
+droid.prototype.xxxxxe
+
+
+
+
+
+
+
+
