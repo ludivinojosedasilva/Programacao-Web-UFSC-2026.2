@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<!--
+    Informa ao navegador que estamos utilizando HTML5.
+-->
+
+<html lang="pt-BR">
+
+<head>
+
+    <!--
+        Define a codificação dos caracteres.
+
+        UTF-8 permite utilizar corretamente:
+        á
+        é
+        ç
+        ã
+        etc.
+    -->
+
+    <meta charset="UTF-8">
+
+
+    <!--
+        Texto que aparece na aba do navegador.
+    -->
+
+    <title>Aula 1 - AJAX</title>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         CONTEÚDO DA PÁGINA
+         ===================================================== -->
+
+
+    <h1>Programação Web - Aula 1</h1>
+
+
+    <p>
+        Exemplo de servidor HTTP com Node.js,
+        GET e XMLHttpRequest.
+    </p>
+
+
+    <!--
+        Quando o usuário clicar neste botão,
+        a função JavaScript "carrega()" será executada.
+
+        Importante:
+
+        Não estamos colocando um link para outra página.
+
+        Estamos executando JavaScript.
+    -->
+
+    <button onclick="carrega()">
+        Carrega conteúdo
+    </button>
+
+
+    <!--
+        Esta div inicialmente possui este texto.
+
+        Depois que fizermos a requisição AJAX,
+        o JavaScript irá substituir este conteúdo
+        pela resposta enviada pelo servidor.
+    -->
+
+    <div id="demo">
+
+        Conteúdo inicial da página.
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script>
+
+
+        // -----------------------------------------------------
+        // FUNÇÃO CARREGA
+        // -----------------------------------------------------
+
+        // Esta função será executada quando o botão
+        // for pressionado.
+
+        function carrega() {
+
+
+            // -------------------------------------------------
+            // CRIANDO UM XMLHttpRequest
+            // -------------------------------------------------
+
+            // XMLHttpRequest é uma API do navegador
+            // que permite fazer requisições HTTP através
+            // do JavaScript.
+
+            const xhttp = new XMLHttpRequest();
+
+
+            // -------------------------------------------------
+            // MONITORANDO A REQUISIÇÃO
+            // -------------------------------------------------
+
+            // onreadystatechange é executado sempre que
+            // o estado da requisição muda.
+
+            xhttp.onreadystatechange = function () {
+
+
+                // readyState == 4
+                //
+                // significa que a requisição terminou.
+
+                //
+                // status == 200
+                //
+                // significa que o servidor respondeu
+                // com sucesso.
+
+                if (this.readyState === 4 && this.status === 200) {
+
+
+                    // -------------------------------------------------
+                    // PEGANDO A RESPOSTA DO SERVIDOR
+                    // -------------------------------------------------
+
+                    // responseText contém o texto enviado
+                    // pelo servidor através de:
+                    //
+                    // res.end(...)
+                    //
+                    // no servidor Node.js.
+
+
+                    // -------------------------------------------------
+                    // ALTERANDO O HTML
+                    // -------------------------------------------------
+
+                    // document.getElementById("demo")
+                    //
+                    // encontra:
+                    //
+                    // <div id="demo">
+                    //
+                    // Depois utilizamos innerHTML para alterar
+                    // o conteúdo dessa div.
+
+                    document.getElementById("demo").innerHTML =
+                        this.responseText;
+
+                }
+
+            };
+
+
+            // -------------------------------------------------
+            // CONFIGURANDO A REQUISIÇÃO
+            // -------------------------------------------------
+
+            // open() configura a requisição.
+
+            //
+            // Primeiro parâmetro:
+            // método HTTP
+            //
+            // GET
+            //
+            // Segundo parâmetro:
+            // URL
+            //
+            // /conteudo
+            //
+            // Terceiro parâmetro:
+            // true = requisição assíncrona
+
+            xhttp.open("GET", "/conteudo", true);
+
+
+            // -------------------------------------------------
+            // ENVIANDO A REQUISIÇÃO
+            // -------------------------------------------------
+
+            // Aqui efetivamente enviamos a requisição
+            // para o servidor.
+
+            xhttp.send();
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
