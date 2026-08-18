@@ -1,0 +1,14 @@
+#Disparar um servidor WEB no diretorio local:
+#se você usa Python 2
+Python 2 — python -m SimpleHTTPServer 8000
+
+#se você usa Python 3
+Python 3 — python -m http.server 8000
+
+
+#usar a ferramenta http-server
+sudo npm i -g http-server
+chamar na pasta correta: http-server .
+
+
+Tópicos de interesse neste exemplo: HTML básico, classes, IDs, chamada AJAX
