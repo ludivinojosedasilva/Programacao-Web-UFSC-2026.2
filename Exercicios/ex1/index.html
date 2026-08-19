@@ -1,0 +1,39 @@
+<html>
+    <head>
+
+        <style>
+            #demo {
+                border: 1px solid red;
+                width:80%;
+            }
+            .figura {
+                width:30px;
+            }
+        </style>
+
+<script>
+    function carrega() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML = xhttp.responseText;
+            }
+        };
+        xhttp.open("GET", "/conteudo3", true);
+        xhttp.send();
+    }
+
+
+</script>
+</head>
+<body>
+    <a href="http://www.google.com">GOOGLE</a>
+    <a href="http://www.ufsc.br">UFSC</a>
+    <img class="figura" src="https://ara.ufsc.br/wp-content/themes/brasilGovInterno/img/brasao_site_ufsc.svg?ver=1785275878" alt="figura" />
+    <button onclick="carrega()">Carrega</button>
+    <div id="demo">
+        teste teste teste
+    </div>
+</body>
+
+</html>
