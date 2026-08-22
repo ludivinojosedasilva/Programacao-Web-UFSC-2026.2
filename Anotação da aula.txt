@@ -31,7 +31,10 @@ Começar a estudar sobre JavaScrit os comandos, let, criação de funções, com
 OBJETOS
 ____________________
 
-droid.prototype.xxxxxe
+droid.prototype.xxxxxe,, pesquisar como fazer tudo por cmd desde criação de arquivo, edição de node module e tudo ... comandos como npm init -y, etc
+Estudar o básico de criação de api, criação de rotas e etc...
+O que significa parâmetro ou coisas de tipo, como passar parâmetro, etc...
+Como fazer ele ser público ou privado?
 
 
 
