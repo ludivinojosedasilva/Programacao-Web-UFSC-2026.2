@@ -1,0 +1,5 @@
+123: Monitor 17 polegadas
+567: computador Core2 16G marca XYZ
+987  mesa
+  mesa2
+444  mesa2

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #demo {
+        border:1px solid red;
+        width:90%;
+      }
+    </style>
+  </head>
+<body>
+
+<h2>Faz uma requisição para o servidor e insere o resultado dentro do bloco</h2>
+<p id="demo">
+</p>
+
+<script>
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+  const myObj = JSON.parse(this.responseText);
+  document.getElementById("demo").innerHTML = myObj.name+'  '+myObj.age;
+}
+xmlhttp.open("GET", "json_demo.json");
+xmlhttp.send();
+</script>
+
+</body>
+</html>
