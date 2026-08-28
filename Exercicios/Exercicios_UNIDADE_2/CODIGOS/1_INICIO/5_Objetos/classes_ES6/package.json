@@ -1,0 +1,12 @@
+{
+  "name": "classes_es6",
+  "version": "1.0.0",
+  "description": "",
+  "type":"module",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

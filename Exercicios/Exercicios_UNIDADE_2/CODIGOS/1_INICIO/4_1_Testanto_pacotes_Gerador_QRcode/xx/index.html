@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <style>
+      #container {
+          width:1000px;
+          border:1px solid black;
+          margin:200px;
+      }
+    </style>
+<body>
+<div id="container"></div>
+<script src="qrcode.min.js"></script>
+<script>
+var qrcode = new QRCode({
+  content: "http://www.ufsc.br/",
+  container: "svg-viewbox", //Responsive use
+  join: true //Crisp rendering and 4-5x reduced file size
+});
+var svg = qrcode.svg();
+document.getElementById("container").innerHTML = svg;
+</script>
+</body>
+</html>
