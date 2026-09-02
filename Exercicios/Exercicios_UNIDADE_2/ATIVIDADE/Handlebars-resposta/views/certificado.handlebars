@@ -1,0 +1,28 @@
+
+<div class="borda">
+
+<div class="alinhacentro">
+<H1> Certificado </H1>
+<img  src="./brasao.svg" width="50px"/>
+</div>
+
+<p>
+Certificamos para todos os fins que <b>{{ nome }}</b> desenvolveu a atividade {{ atividade }}  na instituicao <i> {{ instituicao }} </i>, totalizando {{ horas }} de atividades extracurriculares.
+</p>
+
+ <ul>
+    {{#each lista}}
+
+        <li> {{this}} </li>
+
+    {{/each}}
+      </ul>
+
+Sem mais nada a declarar,
+
+<div class="alinhadireita">
+                                UFSC - Araranguá
+                                {{ data }}
+</div>
+
+</div>

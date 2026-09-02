@@ -1,0 +1,58 @@
+<html>
+
+
+
+
+	<BODY>
+
+			<input value="Nome" id="nome" name="nome" type="text">
+			<input value="Instituicao" id="instituicao" name="instituicao" type="text">
+      <input value="atividade" id="atividade" name="atividade" type="text">
+      <input value="horas" id="horas" name="horas" type="text">
+      <input value="data" id="data" name="data" type="text">
+      <input value="lista" id="lista" name="lista" type="text">
+
+
+			<button onclick="envia()">ENVIA</button>
+
+
+
+    <script>
+
+        async function envia() {
+          let registro={};
+
+            registro.nome   = document.getElementById("nome").value;
+            registro.instituicao   = document.getElementById("instituicao").value;
+            registro.atividade  = document.getElementById("atividade").value;
+            registro.horas  = document.getElementById("horas").value;
+            registro.data  = document.getElementById("data").value;
+            let tmp  = document.getElementById("lista").value;
+
+            registro.lista =  tmp.split(",");
+
+
+            const rawResponse = await fetch(
+                "/geraCertificado",
+                {
+                    method: "POST",
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(registro),
+                },
+            );
+            const html = await rawResponse.text();
+
+            // Substitui a página atual pelo HTML gerado pelo Handlebars
+            document.open();
+            document.write(html);
+            document.close();
+
+        }
+    </script>
+
+	</BODY>
+
+</html>
